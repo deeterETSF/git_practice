@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+
+  <title>Base - HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--[if (gte mso 9)|(IE)]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+
+  <!-- Make sure Arial is first in the font-family for Outlook & add Outlook-only classes -->
+  <!--[if mso]> 
+    <style type="text/css"> 
+      body, table, td { font-family: Arial, Helvetica, sans-serif !important; } 
+      .mso-no-border { border: none !important; }
+      .mso-border { border: 2px solid #003a5d !important; }
+    </style> 
+  <![endif]-->
+
+  <style type="text/css">
+  	#outlook a { padding: 0; }
+  	.ReadMsgBody, .ExternalClass { width: 100%; }
+  	.ExternalClass * { line-height: 100%; }
+  	.ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass p, .ExternalClass div { line-height: 100%; mso-line-height-rule: exactly; }
+  	body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0 !important; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+  	a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+  	@-ms-viewport { width: device-width; }
+  	/* div, button { display:block !important; } */
+    #MessageViewBody a { color: inherit; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; line-height: inherit; } /* Samsung link fix */
+    #MessageViewBody, #MessageWebViewDiv { width: 100% !important; } /* Samsung width fix - doesn't always work */
+    /* #MessageViewBody, #MessageWebViewDiv { min-width: 100vw; margin: 0 !important; zoom: 1 !important; } */ /* Samsung width fix - doesn't always work */
+  </style>
+
+  <style>
+  	@media only screen and (max-device-width: 480px), screen and (max-width: 480px) {
+      .container { width: 100% !important; height: auto !important; }
+
+  		.show { display: block !important; margin: 0 !important; padding: 0 !important; overflow: visible !important; width: auto !important; max-height: inherit !important; }
+  		.hide { display: none !important; }
+
+  		.stack { display: block !important; width: 100% !important; }
+      .stack-auto { display: block !important; width: auto !important; }
+      .stack-keepwidth { display: block !important; }
+   		.display-header { display: table-header-group !important; }
+  		.display-footer { display: table-footer-group !important; }
+
+      .center { margin-left: auto !important; margin-right: auto !important; }
+  		.align-center { text-align: center !important; }
+  		.align-left { text-align: left !important; }
+      .align-right { text-align: right !important; }
+      .center-img img { margin-left: auto !important; margin-right: auto !important; }
+      .center-table table { margin-left: auto !important; margin-right: auto !important; }
+      .left-table table { float: left !important; }
+      .right-table table { float: right !important; }
+
+      .add-break { display: block !important; width: 100% !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; }
+          
+  		.width-full { width: 100% !important; height: auto !important; }
+      .width-half { width: 50% !important; height: auto !important; }
+      .width-third { width: 33.33% !important; height: auto !important; }
+      .width-quarter { width: 25% !important; height: auto !important; }
+      .width-auto { width: auto !important; }
+      .height-auto { height: auto !important; }
+      .width-full-img img { width: 100% !important; height: auto !important; }
+      
+      .pad-0 { padding: 0 !important; }
+      .pad-0LR { padding-right: 0 !important; padding-left: 0 !important; }
+      .pad-0T { padding-top: 0 !important; }
+      .pad-0B { padding-bottom: 0 !important; }
+      .pad-0L { padding-left: 0 !important; }
+      .pad-0R { padding-right: 0 !important; }
+      .pad-5T { padding-top: 5px !important; }
+      .pad-5B { padding-bottom: 5px !important; }
+      .pad-5L { padding-left: 5px !important; }
+      .pad-5R { padding-right: 5px !important; }
+      .pad-10T { padding-top: 10px !important; }
+      .pad-10B { padding-bottom: 10px !important; }
+      .pad-10L { padding-left: 10px !important; }
+      .pad-10R { padding-right: 10px !important; }
+      .pad-10LR { padding-right: 10px !important; padding-left: 10px !important; }
+      .pad-15T { padding-top: 15px !important; }
+      .pad-15B { padding-bottom: 15px !important; }
+      .pad-15L { padding-left: 15px !important; }
+      .pad-15R { padding-right: 15px !important; }
+      .pad-20T { padding-top: 20px !important; }
+      .pad-20B { padding-bottom: 20px !important; }
+      .pad-20L { padding-left: 20px !important; }
+      .pad-20R { padding-right: 20px !important; }
+      .pad-20LR { padding-right: 20px !important; padding-left: 20px !important; }
+      .pad-25T { padding-top: 25px !important; }
+      .pad-25B { padding-bottom: 25px !important; }
+      .pad-25L { padding-left: 25px !important; }
+      .pad-25R { padding-right: 25px !important; }
+      .pad-30T { padding-top: 30px !important; }
+      .pad-30B { padding-bottom: 30px !important; }
+      .pad-30L { padding-left: 30px !important; }
+      .pad-30R { padding-right: 30px !important; }
+
+      .fnt-10 { font-size: 10px !important; line-height: 14px !important; }
+      .fnt-11 { font-size: 11px !important; line-height: 15px !important; }
+      .fnt-12 { font-size: 12px !important; line-height: 16px !important; }
+      .fnt-14 { font-size: 14px !important; line-height: 18px !important; }
+      .fnt-16 { font-size: 16px !important; line-height: 20px !important; }
+      .fnt-18 { font-size: 18px !important; line-height: 22px !important; }
+      .fnt-20 { font-size: 20px !important; line-height: 24px !important; }
+      .fnt-24 { font-size: 24px !important; line-height: 28px !important; }
+      .fnt-30 { font-size: 30px !important; line-height: 34px !important; }
+      
+      .border-0 { border: 0 !important; }
+      .border-0T { border-top: 0 !important; }
+      .border-0B { border-bottom: 0 !important; }
+      .border-0L { border-left: 0 !important; }
+      .border-0R { border-right: 0 !important; }
+      .border-1T { border-top: 1px #eeeeee solid !important; }
+      .border-1B { border-bottom: 1px #eeeeee solid !important; }
+      .border-1L { border-left: 1px #eeeeee solid !important; }
+      .border-1R { border-right: 1px #eeeeee solid !important; }
+      .border-2T { border-top: 2px #eeeeee solid !important; }
+      .border-2B { border-bottom: 2px #eeeeee solid !important; }
+      .border-2L { border-left: 2px #eeeeee solid !important; }
+      .border-2R { border-right: 2px #eeeeee solid !important; }
+  	}
+  </style>
+</head>
+<body style="margin: 0px; padding: 0px; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+  <!-- %%[ /* <div style="display: none; max-height: 0px; overflow: hidden;">Preheader here</div> */ ]%% -->
+  <div style="display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
+  <div style="font-size: 0; line-height: 0;"><custom name="opencounter" type="tracking"></div>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 0 auto !important;">
+		<tr>
+			<td bgcolor="#fcfcfc">
+				<div align="center">
+					<table border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" class="container">
+
+						<tr>
+							<td align="center" valign="top">
+
+                <!-- useful snippets -->
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" valign="top" bgcolor="#fbfbfb" style="color:#fbfbfb; font-size:8px; line-height:8px; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule:exactly; font-weight:normal;">
+
+                      <!-- mobile only line break -->
+                      text text <span class="add-break"></span>text text
+
+                      <!-- desktop only line break -->
+                      text text <span class="hide"><br></span>text text
+
+                      <!-- trick CB into rendering without required info -->
+                      %%[ /* <span style="color:#ff0000;">FAKE PROFILE CENTER LINK</span>
+                      <div style="display:none">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" valign="top" style="font-family: Arial, sans-serif; font-weight: normal; font-size: 1px; line-height: 1px; color: #ffffff; mso-line-height-rule: exactly;">
+                              This email was sent by: <b>%%Member_Busname%%</b><br>%%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%
+                              <a href="%%profile_center_url%%" alias="Update Profile" target="_blank" style="color: #ffffff; text-decoration: none;">Update Profile</a>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      */ ]%%
+
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- spacer -->
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" valign="top" style="padding-top:30px;">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center" valign="top" bgcolor="#fbfbfb" style="color: #fbfbfb; font-size: 8px; line-height: 8px; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; font-weight: normal;">&nbsp;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- text -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;">Copy goes here.</td>
+                  </tr>
+                </table>
+
+                <!-- text with link -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;"><a href="#" alias="Alias" target="_blank" style="color: #000001; text-decoration: none;">Copy goes here.</a></td>
+                  </tr>
+                </table>
+
+                <!-- image -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="center" valign="top"><img class="width-full" src="#" width="600" alt="Image Alt" style="display: block; border: none; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;"></td>
+                  </tr>
+                </table>
+
+                <!-- image with link -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="center" valign="top"><a href="#" alias="Alias" target="_blank"><img class="width-full" src="#" width="600" alt="Image Alt" style="display: block; border: none; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;"></a></td>
+                  </tr>
+                </table>
+
+                <!-- show on mobile only -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <!--[if !mso]><!-- -->
+                  <tr>
+                    <td bgcolor="#ffffff" style="font-size:0%; line-height: 0px; padding:0;">
+                      <div class="show" style="font-size:0%; max-height: 0; overflow: hidden; display: none;">
+
+                        ...
+
+                      </div>
+                    </td>
+                  </tr>
+                  <!--<![endif]-->
+                </table>
+
+                <!-- show on desktop only -->
+                <table class="hide" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="left" valign="top">
+
+                        ...
+
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- 2-column forward stack -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <th class="stack" width="300" align="center" valign="middle">
+
+                      LEFT DESKTOP / TOP MOBILE
+
+                    </th>
+                    <th class="stack" width="300" align="center" valign="middle">
+
+                      RIGHT DESKTOP / BOTTOM MOBILE
+
+                    </th>
+                  </tr>
+                </table>
+
+                <!-- 2-column reverse stack -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <th class="stack" style="font-size: 0%; line-height: 0px; padding: 0;"><div style="font-size: 0%; max-height: 0; overflow: hidden; display: none;">&nbsp;</div></th>
+                    <th rowspan="2" class="stack" width="300" align="center" valign="middle">
+
+                      RIGHT DESKTOP / TOP MOBILE
+
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="stack" width="300" align="center" valign="middle">
+
+                      LEFT DESKTOP / BOTTOM MOBILE
+
+                    </th>
+                  </tr>
+                </table>
+
+                <!-- 2-column (no stack) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="width-half" width="300" align="center" valign="middle">
+
+                      LEFT
+
+                    </td>
+                    <td class="width-half" width="300" align="center" valign="middle">
+
+                      RIGHT
+
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- 3-column (no stack) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="width-third" width="200" align="center" valign="middle">
+
+                      LEFT
+
+                    </td>
+                    <td class="width-third" width="200" align="center" valign="middle">
+
+                      MIDDLE
+
+                    </td>
+                    <td class="width-third" width="200" align="center" valign="middle">
+
+                      RIGHT
+
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- bulleted list -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td align="right" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;">&bull;</td>
+                          <td align="left" valign="top" style="padding-left: 20px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;">List item 1</td>
+                        </tr>
+                        <tr>
+                          <td align="right" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;">&bull;</td>
+                          <td align="left" valign="top" style="padding-left: 20px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; line-height: 20px; color: #000001; mso-line-height-rule: exactly;">List item 2</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Solid Button: Desktop: Fluid Width, Mobile: Full Width (no rounded corners on Outlook!) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="pad-20LR" style="padding: 15px 30px;" align="center" valign="top">
+                      <table class="width-full" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" bgcolor="#005589" align="center">
+                            <a href="http://www.marketingcloud.com" alias="Button Alias" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #ffffff; text-transform: none; text-decoration: none; padding: 14px 30px; border: 1px solid #005589; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: block;">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->FLUID WIDTH / FULL WIDTH<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Solid Button: Desktop: Fixed Width, Mobile: Full Width (no rounded corners and only text links on Outlook!) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="width-full pad-20LR" style="padding: 15px 150px;" width="300" align="center" valign="top">
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" valign="middle" height="50" bgcolor="#005589" align="center">
+                            <a href="http://www.marketingcloud.com" alias="Button Alias" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 50px; color: #ffffff; text-transform: none; mso-line-height-rule: exactly; text-decoration: none; display: block">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->FIXED WIDTH / FULL WIDTH<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Solid Button: Desktop: Full Width, Mobile: Full Width (no rounded corners and only text links on Outlook!) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="pad-20LR" style="padding: 15px 30px;" align="center" valign="top">
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" valign="middle" height="50" bgcolor="#005589" align="center">
+                            <a href="http://www.marketingcloud.com" alias="Button Alias" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 50px; color: #ffffff; text-transform: none; mso-line-height-rule: exactly; text-decoration: none; display: block">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->FULL-WIDTH<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Outlined Button: Desktop: Fluid Width, Mobile: Full Width (no rounded corners on Outlook!) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="pad-20LR" style="padding: 15px 30px;" align="center" valign="top">
+                      <table class="width-full" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" bgcolor="#ffffff" align="center">
+                            <a href="http://www.marketingcloud.com" alias="Button Alias" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #006097; text-transform: none; text-decoration: none; padding: 13px 30px; border: 2px solid #005589; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: block;">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->FLUID WIDTH / FULL WIDTH<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Outlined Button: Desktop: Fixed Width, Mobile: Full Width (no rounded corners and only text links on Outlook!) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="width-full pad-20LR" style="padding: 15px 150px;" width="300" align="center" valign="top">
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td class="mso-border" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" valign="middle" height="46" bgcolor="#ffffff" align="center">
+                            <a class="mso-no-border" href="http://www.marketingcloud.com" alias="Button Alias" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 46px; color: #006097; text-transform: none; mso-line-height-rule: exactly; text-decoration: none; display: block; border: 2px solid #003a5d; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->FIXED WIDTH / FULL WIDTH<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Outlined Button: Desktop: Full Width, Mobile: Full Width (no rounded corners and only text links on Outlook!) -->
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="pad-20LR" style="padding: 15px 30px;" align="center" valign="top">
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td class="mso-border" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" valign="middle" height="46" bgcolor="#ffffff" align="center">
+                            <a class="mso-no-border" href="http://www.marketingcloud.com" alias="Button Alias" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 46px; color: #006097; text-transform: none; mso-line-height-rule: exactly; text-decoration: none; display: block; border: 2px solid #003a5d; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->FULL-WIDTH<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+							</td>
+						</tr>
+            
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
